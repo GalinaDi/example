@@ -1,0 +1,200 @@
+.section_descr {
+	margin: 12px 0 16px;
+}
+.products_container {
+	margin-top: 40px;
+}
+.products_container .item {
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+.products_container .name_container {
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 16px;
+}
+.products_container .name_container a {
+	display: block;
+	max-width: 400px;
+	color: #000;
+	text-decoration: none;
+}
+.products_container .name_container a>.name {
+	text-decoration: underline;
+}
+.products_container .name_container .license_name {
+	display: block;
+	max-width: 400px;
+}
+.products_container .price {
+	white-space: nowrap;
+}
+.products_container .order {
+	text-decoration: none;
+    background-color: var(--green);
+    color: #fff;
+    padding: 11px 32px 9px 24px;
+    flex-shrink: 0;
+    margin-left: 80px;
+}
+.products_container .item:hover .name_container a>.name,
+.products_container .item:hover .name_container .license_name,
+.products_container .item:hover .price,
+.products_container .item:target .name_container a>.name,
+.products_container .item:target .name_container .license_name,
+.products_container .item:target .price {
+	color: var(--dark_green);
+}
+.products_container .item:hover .order,
+.products_container .item:target .order {
+	background-color: var(--dark_green);
+}
+
+.tabs-items>div {
+    display: none;
+}
+.tabs_container {
+    margin: 16px 0 40px;
+    display: flex;
+    align-items: center;
+}
+.tabs_container .hr {
+	height: 1px;
+    background-color: #000;
+    width: 100%;
+}
+.tabs_container .tabs-nav {
+    width: 100%;
+    max-width: 950px;
+    margin-left: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+.tabs_container .tabs-target {
+	text-decoration: none;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 3px 10px 5px 8px;
+    color: #000000;
+    border: 1px solid #000000;
+}
+.tabs_container .tabs-target.active,
+.tabs_container .tabs-target:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+@media (max-width: 700px) {
+	.products_container .item {
+		flex-direction: column;
+		margin-bottom: 34px;
+	}
+	.products_container .order {
+		margin-left: 0;
+    	margin-top: 8px;
+	}
+	.products_container .name_container {
+    	margin-bottom: 8px;
+	}
+	.products_container .price {
+		font-size: 20px;
+    	font-weight: bold;
+	}
+}
+
+.products_container .item .name_container .new {
+	background-color: #84f1de;
+    font-size: 12px;
+    padding: 2px 7px 3px 5px;
+}
+
+.products_container .discount_descr {
+    color: #d40090;
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: 500;
+}
+.products_container .discount_descr a {
+    color: #d40090;
+    text-decoration: underline;
+}
+.products_container .discount_descr a:hover {
+    color: #900062;
+}
+
+.products_container .discount {
+	display: flex;
+    flex-shrink: 0;
+}
+.products_container .discount .old_price {
+	position: relative;
+    color: #939393;
+    margin-right: 12px;
+}
+.products_container .discount .old_price:before {
+	content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #939393;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    transform: rotate(-10deg);
+}
+
+.items_container {}
+.items_container .item {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.items_container .date {
+    font-size: 14px;
+    font-style: italic;
+    color: #7d7d7d;
+}
+.items_container a {
+    color: var(--green);
+    font-size: 17px;
+    margin: 0 0 3px;
+}
+.items_container a:hover {
+    color: var(--dark_green);
+}
+.items_container .preview {
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .tabs_container {
+        margin-bottom: 28px;
+    }
+    .tabs_container .tabs-nav {
+        display: block;
+    }
+    .tabs_container .hr {
+        display: none;
+    }
+    .tabs_container .tabs-target {
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 700px) {
+    .products_container .discount {
+        flex-direction: row;
+    }
+}
+@media (max-width: 880px) {
+	.products_container .discount {
+		flex-direction: column;
+	}
+}
